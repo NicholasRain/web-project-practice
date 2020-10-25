@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.outer1{
+    margin: 50px auto;
+}
+a{
+    text-decoration: none;
+}
+.outer1 .a1{
+    display: block;
+    font-size: 24px;
+    /*background-color: gold;*/
+    width: 1140px;
+    height: 31px;
+    text-align: center;
+    font-weight: bold;
+    color: #000000;
+    margin :0 auto;
+}
+.outer1 .a2{
+    display: block;
+    /*background-color: gainsboro;*/
+    height: 35px;
+    line-height: 35px;
+    width: 1140px;
+    text-align: center;
+    margin :0 auto 15px;
+}
+.outer1 span{
+    font-size: 14px;
+    color: #999999;
+}
+.outer1 .inter1{
+    position: relative;
+    width: 1140px;
+    margin :0 auto;
+
+}
+.outer1 .inter1 .bbb{
+    position: relative;
+    width: 1140px;
+    height: 365px;
+    overflow: hidden;
+    margin :0 auto 15px;
+}
+.outer1 .inter1 i{
+     font-size: 30px;
+}
+.outer1 .inter1 .zuo{
+    position: absolute;
+    top: 35%;
+    left: -30px;
+}
+.outer1 .inter1 .you{
+    position: absolute;
+    top:35%;
+    right: -30px;
+}
+.inter1 ul{
+    position: relative;
+    width: 1995px;
+    height: 365px;
+    left: 5px;
+    /*left: -275px;*/
+    transition: all 0.5s;
+}
+.inter1 ul li{
+    list-style: none;
+    float: left;
+    width: 285px;
+    height: 100%;
+}
+.inter1 img{
+    width: 275px;
+    height: 275px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+.inter1 ul li p{
+    height: 20px;
+    line-height: 20px;
+    /*background-color: #795da3;*/
+    margin: 10px auto 4px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    color: #000000;
+}
+.inter1 ul li span{
+    display: block;
+    /*width: 100%;*/
+    text-align: center;
+    font-size: 14px;
+    color: #DB2E2E;
+}
+

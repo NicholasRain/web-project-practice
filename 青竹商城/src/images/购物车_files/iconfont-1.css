@@ -1,0 +1,33 @@
+
+@font-face {font-family: "iconfont-1";
+  src: url('//asset.ibanquan.com/middle/30611/c/406/59100df30689871fa500067d/iconfont-1.eot?v=1496219460_1494224371'); /* IE9*/
+  src: url('//asset.ibanquan.com/middle/30611/c/406/59100df30689871fa500067d/iconfont-1.eot?v=1496219460_1494224371#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('//asset.ibanquan.com/middle/30611/c/406/59100df40689871fa5000686/iconfont-1.woff?v=1496219460_1494224372') format('woff'), /* chrome, firefox */
+  url('//asset.ibanquan.com/middle/30611/c/406/59100df40689871fa5000683/iconfont-1.ttf?v=1496219460_1494224372') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('//asset.ibanquan.com/middle/30611/c/406/59100df40689871fa5000680/iconfont-1.svg?v=1496219460_1494224372#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont-1 {
+  font-family:"iconfont-1" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-qq1:before { content: "\e606"; }
+
+.icon-weixin1:before { content: "\e631"; }
+
+.icon-qq:before { content: "\e698"; }
+
+.icon-cart:before { content: "\e65a"; }
+
+.icon-my:before { content: "\e690"; }
+
+.icon-home:before { content: "\e696"; }
+
+.icon-filter2:before { content: "\e6ba"; }
+
+.icon-fenlei:before { content: "\e60a"; }
+

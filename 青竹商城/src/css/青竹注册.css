@@ -1,0 +1,90 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+}
+img{
+    vertical-align: middle;
+}
+a{
+    text-decoration: none;
+}
+body {
+    background-image: url("../images/background.png");
+    background-repeat: no-repeat;
+    width: 100%;
+}
+.outer7{
+    width: 300px;
+    /*height: 326px;*/
+    background-color: #ffffff;
+    margin: 100px auto;
+    padding: 30px;
+}
+.outer7 h4{
+    font-size: 18px;
+    margin: 0 0 24px;
+    font-weight: normal;
+}
+.outer7 form{
+    width: 300px;
+    /*height: 198px;*/
+    /*background-color: #795da3;*/
+}
+.outer7 form .div,.div1{
+    position: relative;
+}
+.outer7 form .div1{
+    display: none;
+}
+.outer7 form input{
+    margin-bottom: 20px;
+    width: 100%;
+    height: 42px;
+    border: 0.5px solid #e6e6e6;
+    border-radius: 5px;
+}
+.outer7 #s1,#sp1,#s2,#s3{
+    position: absolute;
+    top: 2px;
+    left: 20px;
+    height: 20px;
+    line-height: 36px;
+    color: #b0b0b0;
+    /*background-color: #FF5000;*/
+    background-color: #fff;
+    pointer-events: none;
+}
+.outer7 #sp1{
+    /*width: 165px;*/
+    height: 20px;
+
+    /*pointer-events: none;*/
+}
+.outer7 form .sp2{
+    position: absolute;
+    top: 1px;
+    right: 10px;
+    width: 100px;
+    /*height: 40px;*/
+    line-height: 40px;
+    text-align: center;
+    border-left: 0.5px dashed #e6e6e6;
+}
+.outer7 form .inter1{
+    width: 300px;
+    height: 16px;
+    /*background-color: #FF5000;*/
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+.outer7 form .inter1 span{
+    color: #b0b0b0;
+}
+.outer7 form .inter1 a{
+    color: #333;
+}
+.outer7 form #submit{
+    background: #C78A49;
+    color: #ffffff;
+    font-size: 18px;
+}

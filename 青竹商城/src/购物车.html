@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>购物车</title>
+    <link rel="stylesheet" href="css/青竹0.css">
+    <link rel="stylesheet" href="iconfont/iconfont.css">
+    <link rel="stylesheet" href="css/购物车.css">
+    <link rel="stylesheet" href="css/青竹6.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div class="outer">
+        <div class="inter">
+            <a href=""class="logo"><img src="images/logo.png" alt=""></a>
+            <ul>
+                <li><a href="">查看所有类别</a></li>
+                <li><a href="a青竹总界面.html">首页</a></li>
+                <li><a href="">所有产品</a></li>
+                <li><a href="">博客</a></li>
+                <li><a href="">文章列表</a></li>
+            </ul>
+            <a href="" class="sousuo"><i class="icon iconfont icon-sousuo"></i></a>
+            <div class="inter_right">
+                <a href="青竹登录.html">登录</a>
+                <span>|</span>
+                <a href="青竹注册.html">注册</a>
+                <a href=""><i class="icon iconfont icon-gouwuche" id="shop"></i>0</a>
+            </div>
+        </div>
+        <div class="shop">
+            <p>3件商品 总计:¥1111</p>
+            <div class="shop1"><a href="购物车.html">去结算</a></div>
+        </div>
+    </div>
+    <div class="outer9" id="app">
+        <div class="inter1">
+            <h1>购物车</h1>
+        </div>
+        <div class="inter2">
+            <div class="inter21">
+                <input type="checkbox" class="checkAll"
+                       :checked="this.point"
+                @click="checkall"><span class="s1">全选</span>
+                <span class="s2">商品名称</span><span class="s3">单价</span>
+                <span class="count">数量</span><span class="total">小计</span><span class="del">操作</span>
+            </div>
+            <div class="inter22">
+                <ul >
+                    <li v-for="(item,index) in carts" :key="index">
+                        <input type="checkbox" class="check" :model="item.ischecked"
+                        :checked="item.ischecked"
+                               @click="item.ischecked===0?item.ischecked=1:item.ischecked=0">
+                        <img :src="item.img" alt="">
+                        <span class="s1">{{item.name}}</span>
+                        <span class="money">¥</span>
+                        <span class="price">{{item.price}}</span>
+                        <button @click="item.count--" :disabled="item.count <= 0 " class="sub">-</button>
+                        <span class="count">{{item.count}}</span>
+                        <button @click="item.count++" class="add">+</button>
+                        <span class="money1">¥</span>
+                        <span class="total">{{item.price*item.count}}</span>
+                        <span class="del">
+                            <button @click="deleteItem()">删除</button>
+                        </span>
+                    </li>
+                    <!--                    <li>-->
+                    <!--                        <input type="checkbox" class="check"><img src="images/s2.png" alt="">-->
+                    <!--                        <span class="s1">便携简约清扫扫帚</span><span class="money">¥</span>-->
+                    <!--                        <span class="price">580</span><input type="button" value="-" class="sub">-->
+                    <!--                        <span class="count">1</span><input type="button" value="+" class="add">-->
+                    <!--                        <span class="money1">¥</span><span class="total">580</span>-->
+                    <!--                        <span class="del">删除</span>-->
+                    <!--                    </li>-->
+                    <!--                    <li>-->
+                    <!--                        <input type="checkbox" class="check"><img src="images/s3.png" alt="">-->
+                    <!--                        <span class="s1">黑色陶瓷研磨器皿</span> <span class="money">¥</span>-->
+                    <!--                        <span class="price">150</span><input type="button" value="-" class="sub">-->
+                    <!--                        <span class="count">1</span><input type="button" value="+" class="add">-->
+                    <!--                        <span class="money1">¥</span><span class="total">150</span>-->
+                    <!--                        <span class="del">删除</span>-->
+                    <!--                    </li>-->
+                </ul>
+            </div>
+            <div class="inter23">
+                <div class="picture">
+                    <img src="images/购物车.png" alt="">
+                </div>
+                <p>您的购物车还没有商品，快去挑选心爱的商品吧！</p>
+                <a href=""><span>去逛逛</span></a>
+            </div>
+        </div>
+        <div class="inter3">
+            <div class="inter31">
+                <div class="last">
+                    <a href="订单确认.html">确认结算</a>
+                </div>
+                <input type="checkbox" class="checkAll"
+                       :checked="this.point"
+                       @click="checkall"><span class="s1">全选</span>
+                <span class="ss1">删除</span><span class="ss2">清除下架商品</span>
+                <div class="foot">
+                    已选<span class="totalCount">0</span>件
+                    合计(不含运费) : <span class="totalPrice">¥{{total}}</span>元<br>
+                    <span class="ss3">已优惠 : <span class="ss4"> ¥0</span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="outer5">
+        <div class="inter1">
+            <div class="left">
+                <a href=""><img src="images/logo.png" alt=""></a>
+                <p>青竹良品原创生活类电商品牌，秉承一贯的严谨态度，我们深入世界各地，从源头全程严格把控商品生产环节，力求帮消费者甄选到最优质的商品，全线采用天然原材料，控制甲醛低量无害，采用进口工艺，国际生产线不断优化，食材保证核心原产地新鲜直供，让你享受品质生活</p>
+            </div>
+            <div class="center">
+                <dl>
+                    <dt><a href="">关于我们</a></dt>
+                    <dd><a href="">我的品牌</a></dd>
+                    <dd><a href="">公司动态</a></dd>
+                    <dd><a href="">经历发展</a></dd>
+                    <dd><a href="">商品推广</a></dd>
+                </dl>
+                <dl>
+                    <dt><a href="">支付方式</a></dt>
+                    <dd><a href="">微信支付</a></dd>
+                    <dd><a href="">支付宝</a></dd>
+                    <dd><a href="">百度钱包</a></dd>
+                    <dd><a href="">货到付款</a></dd>
+                </dl>
+                <dl>
+                    <dt><a href="">相关服务</a></dt>
+                    <dd><a href="">退货政策</a></dd>
+                    <dd><a href="">购物流程</a></dd>
+                    <dd><a href="">客服服务</a></dd>
+                    <dd><a href="">商务合作</a></dd>
+                </dl>
+            </div>
+            <div class="right">
+                <img src="images/weixin.png" alt="">
+                <img src="images/weibo.png" alt="">
+                <span>微信公众号</span>
+                <span>微博公众号</span>
+            </div>
+        </div>
+        <hr>
+        <div class="inter2">
+
+        </div>
+    </div>
+
+
+<!--    <script src="jqurey.js"></script>-->
+<!--    <script src="shop.js"></script>-->
+</body>
+
+<script type="text/javascript">
+    let app1  = new Vue({
+        el:'#app',
+        data:{
+            point:0,
+            carts:[{
+                img:'images/s1.png',
+                ischecked:1,
+                name:'经典系列红色时钟',
+                price:580,
+                count:1,
+                totalPrices:580
+            },
+                {
+                    img:'images/s2.png',
+                    ischecked:0,
+                    name:'便携简约清扫扫帚',
+                    price:580,
+                    count:1,
+                    totalPrices:580
+                },
+                {
+                    img:'images/s3.png',
+                    ischecked:0,
+                    name:'黑色陶瓷研磨器皿',
+                    price:150,
+                    count:1,
+                    totalPrices:150
+                }]
+        },
+        methods:{
+            deleteItem(index){
+                return this.carts.splice(index,1)
+            },
+            checkall(){
+                for ( item of this.carts) {
+                    if (this.point === 0){
+                        item.ischecked = 1
+                    }else{
+                        item.ischecked = 0
+                    }
+                }
+                this.point = this.point===0?1:0
+            }
+        },
+        computed:{
+            total(){
+                let ans = 0;
+                for ( item of this.carts) {
+                    console.log(item)
+                    ans += item.count*item.price*item.ischecked
+                }
+                return ans
+            }
+        }
+
+    })
+</script>
+</html>
